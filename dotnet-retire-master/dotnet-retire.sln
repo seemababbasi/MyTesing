@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SampleProjects", "SampleProjects", "{0FA6F455-D528-4C98-9635-271B4EB51ACC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VulnerableRunTimeWebApp", "SampleProjects\VulnerableRunTimeWebApp\VulnerableRunTimeWebApp.csproj", "{B71C0875-44CD-4511-B0CC-B91E11FB2094}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{117AD616-E33A-4183-8CD5-C9BA137C0838}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{FB569CAF-B2B8-4145-8CDF-93150FCE9C8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetireNet.Runtimes.Middleware", "src\RetireNet.Runtimes.Middleware\RetireNet.Runtimes.Middleware.csproj", "{3501E16B-20FF-4196-8C3D-623456C84768}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetireNet.Runtimes.Core.Tests", "test\RetireNet.Runtimes.Core.Tests\RetireNet.Runtimes.Core.Tests.csproj", "{FC2B7245-9C8C-470E-8F0F-A581877F6BFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetireNet.Runtimes.Core", "src\RetireNet.Runtimes.Core\RetireNet.Runtimes.Core.csproj", "{4F4B15D9-538E-4227-B19B-3DAD148694C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetireNet.Runtimes.BackgroundServices", "src\RetireNet.Runtimes.BackgroundServices\RetireNet.Runtimes.BackgroundServices.csproj", "{1B7D756D-6800-4158-BCD1-D610BD42A346}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B71C0875-44CD-4511-B0CC-B91E11FB2094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B71C0875-44CD-4511-B0CC-B91E11FB2094}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B71C0875-44CD-4511-B0CC-B91E11FB2094}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B71C0875-44CD-4511-B0CC-B91E11FB2094}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3501E16B-20FF-4196-8C3D-623456C84768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3501E16B-20FF-4196-8C3D-623456C84768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3501E16B-20FF-4196-8C3D-623456C84768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3501E16B-20FF-4196-8C3D-623456C84768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC2B7245-9C8C-470E-8F0F-A581877F6BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC2B7245-9C8C-470E-8F0F-A581877F6BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC2B7245-9C8C-470E-8F0F-A581877F6BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC2B7245-9C8C-470E-8F0F-A581877F6BFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F4B15D9-538E-4227-B19B-3DAD148694C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F4B15D9-538E-4227-B19B-3DAD148694C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F4B15D9-538E-4227-B19B-3DAD148694C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F4B15D9-538E-4227-B19B-3DAD148694C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B7D756D-6800-4158-BCD1-D610BD42A346}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B7D756D-6800-4158-BCD1-D610BD42A346}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B7D756D-6800-4158-BCD1-D610BD42A346}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B7D756D-6800-4158-BCD1-D610BD42A346}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B71C0875-44CD-4511-B0CC-B91E11FB2094} = {0FA6F455-D528-4C98-9635-271B4EB51ACC}
+		{3501E16B-20FF-4196-8C3D-623456C84768} = {117AD616-E33A-4183-8CD5-C9BA137C0838}
+		{FC2B7245-9C8C-470E-8F0F-A581877F6BFE} = {FB569CAF-B2B8-4145-8CDF-93150FCE9C8B}
+		{4F4B15D9-538E-4227-B19B-3DAD148694C1} = {117AD616-E33A-4183-8CD5-C9BA137C0838}
+		{1B7D756D-6800-4158-BCD1-D610BD42A346} = {117AD616-E33A-4183-8CD5-C9BA137C0838}
+	EndGlobalSection
+EndGlobal

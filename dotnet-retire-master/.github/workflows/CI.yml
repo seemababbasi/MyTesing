@@ -1,0 +1,17 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  ubuntu-16_04:
+    name: ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: |
+            5.0.x
+            6.0.x
+      - name: Test
+        run: dotnet test --verbosity normal /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --logger "GitHubActions;report-warnings=false"

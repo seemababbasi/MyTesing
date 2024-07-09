@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
+        <PackageId>RetireNet.Runtimes.Middleware</PackageId>
+        <LangVersion>preview</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Authors>John Korsnes</Authors>
+        <Description>
+            An ASP.NET Core endpoint to report vulnerable runtimes
+        </Description>
+        <Copyright>John Korsnes</Copyright>
+        <PackageTags>dotnet;retire;vulnerable;scanning;security</PackageTags>
+        <PackageProjectUrl>https://github.com/RetireNet/dotnet-retire</PackageProjectUrl>
+        <license>https://raw.githubusercontent.com/RetireNet/dotnet-retire/master/LICENSE</license>
+        <RepositoryUrl>https://github.com/RetireNet/dotnet-retire</RepositoryUrl>
+        <PackageIcon>logo.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <RepositoryType>git</RepositoryType>
+        <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);IncludeP2PAssets</TargetsForTfmSpecificBuildOutput>
+        <MsExtensionsVersion31>3.1.0</MsExtensionsVersion31>
+        <MsExtensionsVersion50>5.0.0</MsExtensionsVersion50>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\RetireNet.Runtimes.Core\RetireNet.Runtimes.Core.csproj" PrivateAssets="All" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="../../images/logo.png" Pack="true" PackagePath="" />
+        <None Include="../../README.md" Pack="true" PackagePath="" />
+    </ItemGroup>
+
+    <Target Name="IncludeP2PAssets">
+        <ItemGroup>
+            <BuildOutputInPackage Include="$(OutputPath)RetireNet.Runtimes.Core.dll" />
+        </ItemGroup>
+    </Target>
+</Project>

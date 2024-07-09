@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
+        <LangVersion>preview</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <PackageId>RetireNet.Runtimes.BackgroundServices</PackageId>
+        <Authors>John Korsnes</Authors>
+        <Description>
+            An .NET Core BackgroundService to report vulnerable runtimes via logging
+        </Description>
+        <Copyright>John Korsnes</Copyright>
+        <PackageTags>dotnet;retire;vulnerable;scanning;security</PackageTags>
+        <PackageProjectUrl>https://github.com/RetireNet/dotnet-retire</PackageProjectUrl>
+        <license>https://raw.githubusercontent.com/RetireNet/dotnet-retire/master/LICENSE</license>
+        <RepositoryUrl>https://github.com/RetireNet/dotnet-retire</RepositoryUrl>
+        <PackageIcon>logo.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <RepositoryType>git</RepositoryType>
+        <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);IncludeP2PAssets</TargetsForTfmSpecificBuildOutput>
+        <MsExtensionsVersion6>6.0.0</MsExtensionsVersion6>
+        <MsExtensionsVersion50>5.0.0</MsExtensionsVersion50>
+    </PropertyGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="$(MsExtensionsVersion6)" />
+        <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="$(MsExtensionsVersion6)" />
+        <PackageReference Include="Microsoft.Extensions.Options" Version="$(MsExtensionsVersion6)" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="$(MsExtensionsVersion50)" />
+        <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="$(MsExtensionsVersion50)" />
+        <PackageReference Include="Microsoft.Extensions.Options" Version="$(MsExtensionsVersion50)" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\RetireNet.Runtimes.Core\RetireNet.Runtimes.Core.csproj" PrivateAssets="All" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="../../images/logo.png" Pack="true" PackagePath="" />
+        <None Include="../../README.md" Pack="true" PackagePath="" />
+    </ItemGroup>
+
+    <Target Name="IncludeP2PAssets">
+        <ItemGroup>
+            <BuildOutputInPackage Include="$(OutputPath)RetireNet.Runtimes.Core.dll" />
+        </ItemGroup>
+    </Target>
+</Project>
